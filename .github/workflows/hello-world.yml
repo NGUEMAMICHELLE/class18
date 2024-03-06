@@ -1,8 +1,15 @@
 name: hello-world
-on: push
+on: 
+  pull_request
+    branches:
+    - 'main'
 jobs: 
    print-hello:
       runs-on: ubuntu-latest
       steps:
       - name: step-1
         run: echo "hello world"
+
+      -name: step-2   
+       run: sleep 30
+      
